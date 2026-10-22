@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: timden1349/server
+  pullPolicy: IfNotPresent   # не тянуть образ заново, если тег уже есть локально
+  # Тег НЕ фиксируем жёстко — он будет переопределяться из Jenkins
+  tag: ""
+
+service:
+  type: ClusterIP            # внутренний сервис, доступ извне — через port-forward или Ingress
+  port: 8000
+  targetPort: 8000
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

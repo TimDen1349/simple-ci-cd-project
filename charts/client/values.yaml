@@ -1,0 +1,24 @@
+replicaCount: 2
+
+image:
+  repository: timden1349/client
+  pullPolicy: IfNotPresent
+  tag: ""
+
+service:
+  type: NodePort          # чтобы открыть форму в браузере
+  port: 80
+  targetPort: 80
+  nodePort: 30080         # фиксированный порт на ноде (диапазон 30000–32767)
+
+# Адрес API-сервера, который клиентский JavaScript будет вызывать
+api:
+  baseUrl: "http://server:8000"   # внутреннее DNS-имя сервиса server в том же namespace
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
