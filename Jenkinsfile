@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_CREDENTIALS = 'Web123'
+        DOCKER_HUB_CREDENTIALS = 'DockerHubKey'
         DOCKER_HUB_USER        = 'timden1349'
         IMAGE_TAG              = "${env.BUILD_NUMBER}-${env.GIT_COMMIT.take(7)}"
         HELM_NAMESPACE         = 'default'
