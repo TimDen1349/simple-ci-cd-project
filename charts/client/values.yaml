@@ -6,14 +6,13 @@ image:
   tag: ""
 
 service:
-  type: NodePort          # чтобы открыть форму в браузере
+  type: NodePort
   port: 80
   targetPort: 80
-  nodePort: 30080         # фиксированный порт на ноде (диапазон 30000–32767)
+  nodePort: 30080
 
-# Адрес API-сервера, который клиентский JavaScript будет вызывать
 api:
-  baseUrl: "http://server:8000"   # внутреннее DNS-имя сервиса server в том же namespace
+  baseUrl: "http://server:8000"
 
 resources:
   limits:

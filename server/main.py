@@ -4,7 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Status API")
 
-# Не обязательно при работе через nginx-прокси, но полезно для локальной отладки
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
