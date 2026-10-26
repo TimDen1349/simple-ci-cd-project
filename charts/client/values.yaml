@@ -11,8 +11,8 @@ service:
   targetPort: 80
   nodePort: 30080
 
-api:
-  baseUrl: "http://server:8000"
+#api:
+#  baseUrl: "http://server:8000"
 
 resources:
   limits:
