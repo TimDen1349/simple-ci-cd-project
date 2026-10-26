@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM('H/1 * * * *')
+    }
+
     environment {
         DOCKER_HUB_CREDENTIALS = 'DockerHubKey'
         DOCKER_HUB_USER        = 'timden1349'
