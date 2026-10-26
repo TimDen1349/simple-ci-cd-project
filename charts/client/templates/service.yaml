@@ -13,6 +13,3 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
-  env:
-    - name: API_BASE_URL
-      value: {{ .Values.api.baseUrl | quote }}
