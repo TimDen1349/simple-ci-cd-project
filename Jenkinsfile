@@ -68,7 +68,7 @@ pipeline {
                 script {
                     sh """
                         kubectl rollout status deployment/server -n ${HELM_NAMESPACE} --timeout=120s
-                        kubectl rollout status deployment/client -n ${HELM_NAMESPACE} --timeout=120s
+                        kubectl rollout status deployment/client-client -n ${HELM_NAMESPACE} --timeout=120s
                     """
                 }
             }
