@@ -6,10 +6,10 @@ image:
   tag: ""
 
 service:
-  type: NodePort
+  type: LoadBalancer
   port: 80
   targetPort: 80
-  nodePort: 30080
+  #nodePort: 30080
 
 api:
   baseUrl: "http://server:8000"
