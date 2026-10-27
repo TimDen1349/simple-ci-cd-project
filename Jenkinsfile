@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM('*/2 * * * *')
+        githubPush()
     }
-
     environment {
         DOCKER_HUB_CREDENTIALS = 'DockerHubKey'
         DOCKER_HUB_USER        = 'timden1349'
